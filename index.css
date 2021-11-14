@@ -1,0 +1,142 @@
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+html,
+body {
+  background: #121212;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.indicators-container {
+  position: fixed;
+  right: 1rem;
+  width: 30px;
+  height: 100%;
+}
+
+.indicators-container .indicators {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicators-container .indicators .indicator-wrapper {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.1s ease-in-out;
+  margin: 10px;
+}
+
+.indicators-container .indicators .indicator-wrapper .indicator {
+  width: 100%;
+  height: 100%;
+}
+
+.indicators-container .indicators .indicator-wrapper:hover {
+  transform: scale(2.2);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+
+.container .info-container {
+  max-width: 20rem;
+}
+
+.container .title {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.container .content {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+#first {
+  height: 100vh;
+  background: #eb3700;
+  color: white;
+}
+
+#second {
+  height: 100vh;
+  background: #121212;
+  color: white;
+}
+
+#second.container {
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  align-items: center;
+}
+
+#second .info-container {
+}
+
+#third {
+  height: 100vh;
+  background: #ffbb00;
+}
+
+#third.container {
+  flex-direction: row;
+  /* justify-content: flex-start; */
+}
+
+#second.container .image-container,
+#third.container .image-container {
+  width: 400px;
+  height: auto;
+  max-height: 400px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 0.725rem;
+}
+
+#second.container .image-container {
+  margin-left: 2rem;
+}
+
+#third.container .image-container {
+  margin-right: 2rem;
+}
+
+#second.container .image-container img,
+#third.container .image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.725rem;
+}
+
+#fourth {
+  height: 100vh;
+  background: #6200ff;
+  color: white;
+}
