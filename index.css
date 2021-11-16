@@ -44,6 +44,7 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   transition: all 0.1s ease-in-out;
   margin: 10px;
+  cursor: pointer;
 }
 
 .indicators-container .indicators .indicator-wrapper .indicator {
@@ -52,6 +53,10 @@ body::-webkit-scrollbar {
 }
 
 .indicators-container .indicators .indicator-wrapper:hover {
+  transform: scale(2.2);
+}
+
+.indicators-container .indicators .indicator-wrapper.active {
   transform: scale(2.2);
 }
 
@@ -79,39 +84,39 @@ body::-webkit-scrollbar {
   margin-top: 2rem;
 }
 
-#first {
+#section-0 {
   height: 100vh;
   background: #eb3700;
   color: white;
 }
 
-#second {
+#section-1 {
   height: 100vh;
   background: #121212;
   color: white;
 }
 
-#second.container {
+#section-1.container {
   flex-direction: row;
   /* justify-content: flex-start; */
   align-items: center;
 }
 
-#second .info-container {
+#section-1 .info-container {
 }
 
-#third {
+#section-2 {
   height: 100vh;
   background: #ffbb00;
 }
 
-#third.container {
+#section-2.container {
   flex-direction: row;
   /* justify-content: flex-start; */
 }
 
-#second.container .image-container,
-#third.container .image-container {
+#section-1.container .image-container,
+#section-2.container .image-container {
   width: 400px;
   height: auto;
   max-height: 400px;
@@ -120,22 +125,22 @@ body::-webkit-scrollbar {
   border-radius: 0.725rem;
 }
 
-#second.container .image-container {
+#section-1.container .image-container {
   margin-left: 2rem;
 }
 
-#third.container .image-container {
+#section-2.container .image-container {
   margin-right: 2rem;
 }
 
-#second.container .image-container img,
-#third.container .image-container img {
+#section-1.container .image-container img,
+#section-2.container .image-container img {
   width: 100%;
   height: 100%;
   border-radius: 0.725rem;
 }
 
-#fourth {
+#section-3 {
   height: 100vh;
   background: #6200ff;
   color: white;
