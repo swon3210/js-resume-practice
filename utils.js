@@ -8,7 +8,7 @@ export const getDebounce = (callback, duration) => {
     }
 
     clearTimeout(timeout);
-    setTimeout(() => {
+    timer = setTimeout(() => {
       callback(...args);
     }, duration);
   };
