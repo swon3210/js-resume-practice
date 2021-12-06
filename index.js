@@ -23,24 +23,24 @@ const loadMoreSection = getDebounce(() => {
   const newSectionIndex = sections.length - baseSections.length;
   sections.push(dynamicSections[newSectionIndex]);
   render();
-}, DELAY)
+}, DELAY);
 
 const moveScreen = (sectionIndex) => {
   const $section = document.querySelector(`#section-${sectionIndex}`);
 
   window.scrollTo({
     top: $section.offsetTop,
-    behavior: "smooth"
-  }) 
-}
+    behavior: 'smooth',
+  });
+};
 
 const scrollToSection = getThrottle((direction) => {
-  if (direction === "up" && sectionIndex > 0) {
+  if (direction === 'up' && sectionIndex > 0) {
     sectionIndex -= 1;
     moveScreen(sectionIndex);
   }
 
-  if (direction === "down" && sectionIndex < sections.length - 1) {
+  if (direction === 'down' && sectionIndex < sections.length - 1) {
     sectionIndex += 1;
     moveScreen(sectionIndex);
   }
@@ -48,7 +48,7 @@ const scrollToSection = getThrottle((direction) => {
   if (sectionIndex === sections.length - 1) {
     loadMoreSection();
   }
-}, DELAY)
+}, DELAY);
 
 window.addEventListener('wheel', (event) => {
   event.preventDefault();

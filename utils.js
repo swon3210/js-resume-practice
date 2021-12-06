@@ -1,15 +1,14 @@
 export const getDebounce = (callback, duration) => {
-  let timeout;
-  let passedTime = 0;
+  let timeout = null;
 
   return (...args) => {
-    if (passedTime > duration) {
-      return;
+    if (timeout !== null) {
+      clearTimeout(timeout);
     }
 
-    clearTimeout(timeout);
-    timer = setTimeout(() => {
+    timeout = setTimeout(() => {
       callback(...args);
+      timeout = null;
     }, duration);
   };
 };
